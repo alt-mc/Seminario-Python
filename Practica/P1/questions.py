@@ -1,16 +1,47 @@
 import random
 
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
-word = random.choice(words)
+# INICIO MODIFICACION 3
+categorias = {
+    "programacion": [
+        "python",
+        "programa",
+        "variable",
+        "funcion",
+        "bucle",
+        "cadena",
+        "entero",
+        "lista",
+    ],
+    "marca de botellas de agua": [
+        "villavicencio",
+        "glaciar",
+        "kin",
+        "palau",
+        "carrefour",
+        "coto",
+    ],
+    "materiales para tipos de mesadas": [
+        "granito",
+        "marmol",
+        "cuarcita",
+        "cuarzo",
+        "madera",
+        "concreto",
+    ],
+}
+
+print("¡Bienvenido al Ahorcado!")
+print("Categorías: ")
+for categoria in categorias:
+    print(f"- {categoria}")
+
+categoria_elegida = input("Elegi una categoria: ").lower()
+while categoria_elegida not in categorias:
+    categoria_elegida = input("Categoria no valida. Elegi una de la lista: ").lower()
+
+word = random.choice(categorias[categoria_elegida])
+# FINAL MODIFICACION 3
+
 guessed = []
 attempts = 6
 
@@ -18,8 +49,6 @@ attempts = 6
 puntos = 0
 # FIN MODIFICACION 2
 
-print("¡Bienvenido al Ahorcado!")
-print()
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
     progress = ""
