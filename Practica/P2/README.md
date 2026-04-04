@@ -1,6 +1,9 @@
 # Python 2026 - Actividad 2
+## Nombre: Mateo Campagna
+## Legajo: 21023/6
 
 Resolución de la Actividad Práctica 2 de la materia Python 2026.
+
 
 ## Estructura del proyecto
 
